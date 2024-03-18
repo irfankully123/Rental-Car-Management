@@ -1,0 +1,334 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Changa+One);
+
+
+#progress-bar {
+  background: #f2f2f2;
+  border-bottom: 1px solid #bdbdbd;
+  -moz-box-shadow: inset 0 1px 3px #e5e5e4;
+  -webkit-box-shadow: inset 0 1px 3px #e5e5e4;
+  box-shadow: inset 0 1px 3px #e5e5e4;
+}
+
+#progress-bar-steps {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+.progress-bar-step {
+  padding-top: 10px;
+	padding-left: 10px;
+  float: left;
+  width: 20%;
+  color: #c7c9cd;
+  border-right: 1px solid #d2d2d2;
+}
+.progress-bar-step{
+    height: 62px;
+  }
+  .progress-bar-step.current {
+    background: #434b56;
+    color: #fff;
+  }
+
+  .progress-bar-step.done {
+    color: #656d78;
+  }
+
+  .progress-bar-step.last {
+    border: none;
+  }
+
+  .progress-bar-step.done .step_number {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAA6lBMVEVlbXj///9lbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXhlbXg3fQbAAAAATXRSTlMAAAMGCAkLDA4PFRgbHiEkMDM2P0JIS05RVFdaXV5maWxvcnh7h42OkJSWnKWoq7GytLW3ur2/wMHDyczS1dvg4eXo6u3w8fP2+fv8/bJF6toAAAHoSURBVEjHlZVrW4JAEIXdTM1QkygluilWVqZdzMpEu5lFdf7/32mEyGWXFTifcPd9YJ09MyfDFsrEiAiRLpjtq9ELXkZXbbOwjCY1r8HruhneDtEtB/ju23W9xEp63e5/A05LQe8MgeFOkdss+ktRdAcY15io2hjoSHS+C7fJotR00c2H6dV7TA0WLWOK+9UQ3cO4wlSqjNHj6Q7eNphaG29/Z/foXbgGWybDxe4/7eCQLdchnIA+wZDFaYgTn85NsBlLb2KS82gbtyxet7A9egAzAW1iMKc1TLMqZMv+f8xOoRFtBaWXVX3HwlI9WESfoaG+lIvFrwbOiH6A4mbWJxhwZzTwQPQzyhyyUg2eco9weLOX8Uz0DNxatvf5V/tsH5N1/lNFzIgG+LXzwF8XktEIFN7NVi79Vx7jU7jgAj6kc8+P+5gjF7lbwp/2zy3WZF6KffgODbnWq4lUbyrzD1pSQf16W+iKfvvCnVz+rneXJdkn9SdNgsknpdQeTOlv6h09FtaD3mGnifryNHnPHyx6PtE82QvNqkriWeXNwbISLgtzkOVTzVi2RvM7uj8bNL/XorLB2ZbYbScqG0iWIncsRaYd+ZlW0zWm6TU/046UCZguL732M9s3o1e8jm4oi8XNTKqc/wVtOl6ER4sW1gAAAABJRU5ErkJggg==) no-repeat center transparent;
+    color: transparent;
+    font-size: 0px;
+  }
+
+  .progress-bar-step.current .step_number {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAABGdBTUEAALGPC/xhBQAAALdQTFRF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////A93RcQAAADx0Uk5TAAYICQsMDg8YGx4hJDM2P0hLTlFUV1pdZmlsb3J4e42OkJScqKuytLW3ur3AwcPM0tXb4eXo6u3x8/n8tDUGywAAAXBJREFUSMetVdlygkAQbE9ARUTExPsCbzm8MNj//115MCYSQZZK5mnp6qJ6Z3umgT9VyRjP3SOP7nxslFK4vQUfa9F7wR145HXVb6oKFLXZX11Jb5DAbTmk05IeEOkGxZFnpK8/obpPzp7QosUwXmQvpFWMQvktAy1BoRZwm48gNv1q4uWrPu2o5nPtRa9q50ftbYbay2fQQra/Pzx2Ul6tQ+9+HNFJNYTD0e1Q2LOeyq5zXwAA9LkWcNuafQDAhoYA2+AGAGQGOQF2LqAMwIy2PrFsmgCm7Aqxu5wC2FETYmvcATiwIsSu8ADgQkmILfECgBScbzLDv0v8yKw7W0+y9dukJcS2aAJQhH2iZPZgRn8X9lRTyep9djARmsuJ+My//8y80D55i+yqqvCuAmz6yW6p/NqDKGbasShbDOP90g1pleOywWs8oQ0vLhsAmAm5YyYoHN4yTVdlyKp+y7ThP+XlVxYv3RNP7jI9i1PqE7AqO0nONUdbAAAAAElFTkSuQmCC) no-repeat center transparent;
+  }
+
+  .progress-bar-step .step_number {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAABGdBTUEAALGPC/xhBQAAALpQTFRFx8nN////x8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNx8nNQAHp4wAAAD10Uk5TAAAGCAkLDA4PGBseISQzNj9IS05RVFdaXWZpbG9yeHuNjpCUnKirsrS1t7q9wMHDzNLV2+Hl6Ort8fP5/N1I/ZwAAAGFSURBVEjHldXncoJAFAVgr11QREVMFHuvFBtGz/u/VlaMUZCye36y3zDMckuKXkklhImgzmvDuXXE0ZoPtXycZjEWeM/C8B/7dM8GbqtuQ5FIUhrd1Q2wexG6aQJms/h2WHw8CtMTwKlTMHUHmHzo3BRXg8JiXDHN+XVmC1el8KguthmfnsEpU1TKDmbveoJzhaJTOf99u6dbuKoUF/WK1r+20ab4tGE/9QAmJcXE4KGze1QTdRX7rKe7WFNy1uh6egONQ2vY3HUJbtpfaK8KfUvaRYlp/Xn18Zr9QJ3pMTpcuoMx0zuoXFrFjukDZC4t48D0BUUuXcSFaYC49B3yvzuPH+HvFrsTsfvWMeXSU+9fSsE6CQ+rE0m4BgXrm/WOkoiVZ+/QiKsvR/w9//3qea558uWbVWXuWeXNQTkSy4E5SDmhGUsFNr87objD5nchbDfYtQ9bs8N2A4sesXf0iJ3Wf+y0ulKiklJ/7LR+5AYU25de+2nDpXXCyVqyXRw8TAnt+V9Y9UJzR+LVRwAAAABJRU5ErkJggg==) no-repeat center transparent;
+    height: 50px;
+    width: 45px;
+    line-height: 3.5;
+    text-align: center;
+    float: left;
+  }
+
+  .progress-bar-step .step_name {
+    float: left;
+    margin-top: 15px;
+		margin-left: 5px;
+		/*border: 1px solid red;*/
+  }
+
+.clear {
+  float: none !important;
+  clear: both;
+  width: 100%;
+  height: 0;
+}
+
+html, body {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+body, input, textarea, select {
+  font-family: 'Ubuntu',sans-serif;
+}
+.bg-error{
+  background-color: #F2DF01;
+  color:#000;
+}
+.red{
+  color:red;  
+}
+.img-responsive>img{
+  display:grid !important;
+}
+
+.fa-2 {
+  font-size: 2em !important;
+}
+.fa-3 {
+  font-size: 4em !important;
+}
+.fa-4 {
+  font-size: 7em !important;
+}
+.fa-5 {
+  font-size: 12em !important;
+}
+.fa-6 {
+  font-size: 20em !important;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+    display: -webkit-inline-box !important;
+}
+.dashboard-panel-8 {
+   width: 66% !important;
+}
+.Addborder {
+  border: 2px solid red !important;
+  cursor:pointer;
+}
+
+#frmStep2 .row .col-md-2 label:nth-child(1):before {
+  content: '' !important;
+} 
+/*
+#frmStep2 .row .col-md-2:nth-child(1) label:before {
+  content: '' !important;
+} */
+label .sr-only:before { 
+			content:'#'; 
+		}
+
+/*Spinner */
+.fa-spin-custom, .glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unkown width elements */
+}
+
+.has-spinner.btn-mini.active .spinner {
+    width: 10px;
+}
+
+.has-spinner.btn-small.active .spinner {
+    width: 13px;
+}
+
+.has-spinner.btn.active .spinner {
+    width: 16px;
+}
+
+.has-spinner.btn-large.active .spinner {
+    width: 19px;
+}
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../../Images/CarLoader.gif') center no-repeat #fff;
+}
+
+.vertical-center-dialog {
+    margin-top: 30%;
+}
+.off {
+			color:#aaa;
+		}
+		.on {
+			color:#666666;
+		}
+
+input[type="checkbox"], input[type="radio"]  {
+    display:inline-block;
+    /*width:19px;
+    height:19px;*/
+    margin:-1px 4px 0 0;
+    cursor:pointer;
+}
+
+
+.frame{
+			width: 379px; 
+			height: 260px; 
+			border:none !important;
+			text-align:center;
+		}
+		.padlock{
+			background-color:#EEEEEE;
+			margin-top:0px;
+			margin-bottom:0px;
+			width:100%; 
+			height:45px;
+			text-align:center;
+
+		}
+
+		.padlockFooter{
+			margin-top:30px;
+			margin-bottom:0px;
+			text-align:center;
+			margin-left:0px;
+			margin-right:0px;
+			vertical-align:bottom;
+		}
+
+		.padlockFooter .fontsmall{
+			font-size:10px;
+		}
+
+		#lblHeaderTxt{
+			font-weight:bold;
+			font-size:18px;
+		}
+
+		#lblMessage{
+			font-size:10.5px;
+		}
+
+		div.DivFrmMSG{
+			margin:auto;
+			width:367px;
+			height:220px;
+			padding:10px 0px 10px 0px;
+			border:1px solid #BFBFBF;
+			background-color:#f7f7f7;
+			/* Add box-shadow */
+			box-shadow:1px 1px 1px #aaaaaa;
+			-webkit-border-radius: 6px;
+			-moz-border-radius: 6px;
+			border-radius: 6px;
+		}
+
+		.TextBoxAsLabel {
+			 border: none;
+			 background-color: #fff;
+			 background: transparent;
+			 width: 340px !important;
+			 white-space: normal;
+		}
+
+		textarea {
+				resize: none;
+				border: none;
+				overflow: auto;
+				outline: none;
+
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+		}
+		.NoteFooter {
+			background: white;
+			font-size:16px;
+			font-family:Arial Narrow;
+			color: rgb(150, 150, 150);
+			outline: none;
+			margin:0 auto !important;   
+			text-align:center;
+			padding-left:5px;
+		}
+#displBooking {
+			display:block;
+			max-width:600px;
+			/*height:330px;*/
+			margin: 0 auto;		
+			border: 1px solid #888;
+		}
+		#displHeader {
+			display:block;
+			max-width:600px;
+			margin: 0 auto;		
+		}
+		#lblResNo {
+        font-weight: bold;
+        font-size: larger;
+		}
+/*body {line-height: normal !important;}*/
+label {	margin-bottom:0px !important; }		
+/*progress-bar { line-height: 30px !important; }*/
+		
